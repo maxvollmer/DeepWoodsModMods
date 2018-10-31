@@ -1,0 +1,15 @@
+﻿{
+  "Name": "[DW]NeverGetLost",
+  "Author": "Max Vollmer",
+  "Version": "1.0.0",
+  "Description": "Disables getting lost in the DeepWoods. Always find your way back home!",
+  "UniqueID": "maxvollmer.deepwoodsmod.nevergetlost",
+  "EntryDll": "NeverGetLost.dll",
+  "MinimumApiVersion": "2.7",
+  "Dependencies": [
+    {
+      "UniqueID": "maxvollmer.deepwoodsmod",
+      "MinimumVersion": "1.2-beta.16"
+    }
+  ]
+}
