@@ -10,7 +10,7 @@ namespace EvenMoreDeepWoods
         private Texture2D texture;
 
         public WinterTree(Vector2 tileLocation)
-            : base()
+            : base(false)
         {
             this.tilePosition.Value = tileLocation;
             this.texture = Game1.content.Load<Texture2D>("Maps\\winter_town");
