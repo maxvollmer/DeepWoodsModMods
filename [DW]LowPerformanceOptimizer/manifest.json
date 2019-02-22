@@ -1,11 +1,11 @@
 ﻿{
   "Name": "[DW]LowPerformanceOptimizer",
   "Author": "Max Vollmer",
-  "Version": "2.0.0",
+  "Version": "2.1.0",
   "Description": "Removes baubles and leaves, reduces amount of grass. For better performance on low-end machines.",
   "UniqueID": "maxvollmer.deepwoodsmod.lowperformanceoptimizer",
   "EntryDll": "LowPerformanceOptimizer.dll",
-  "MinimumApiVersion": "2.9.2",
+  "MinimumApiVersion": "2.10.2",
   "Dependencies": [
     {
       "UniqueID": "maxvollmer.deepwoodsmod",

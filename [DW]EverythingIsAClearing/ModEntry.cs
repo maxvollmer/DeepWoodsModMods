@@ -9,10 +9,10 @@ namespace EverythingIsAClearing
     {
         public override void Entry(IModHelper helper)
         {
-            GameEvents.FirstUpdateTick += this.GameEvents_FirstUpdateTick;
+            helper.Events.GameLoop.UpdateTicked += this.GameEvents_UpdateTicked;
         }
 
-        private void GameEvents_FirstUpdateTick(object sender, EventArgs e)
+        private void GameEvents_UpdateTicked(object sender, UpdateTickedEventArgs e)
         {
             if (Helper.ModRegistry.IsLoaded("maxvollmer.deepwoodsmod"))
             {

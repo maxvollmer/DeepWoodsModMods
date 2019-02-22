@@ -22,26 +22,29 @@ namespace EvenMoreDeepWoods
 
         public override void Entry(IModHelper helper)
         {
-            GameEvents.FirstUpdateTick += this.GameEvents_FirstUpdateTick;
+            helper.Events.GameLoop.UpdateTicked += this.GameEvents_UpdateTicked;
         }
 
-        private void GameEvents_FirstUpdateTick(object sender, EventArgs e)
+        private void GameEvents_UpdateTicked(object sender, UpdateTickedEventArgs e)
         {
-            if (Helper.ModRegistry.IsLoaded("maxvollmer.deepwoodsmod"))
+            if (e.Ticks == 1)
             {
-                IDeepWoodsAPI deepWoodsAPI = Helper.ModRegistry.GetApi<IDeepWoodsAPI>("maxvollmer.deepwoodsmod");
-                if (deepWoodsAPI != null)
+                if (Helper.ModRegistry.IsLoaded("maxvollmer.deepwoodsmod"))
                 {
-                    CustomizeDeepWoods(deepWoodsAPI);
+                    IDeepWoodsAPI deepWoodsAPI = Helper.ModRegistry.GetApi<IDeepWoodsAPI>("maxvollmer.deepwoodsmod");
+                    if (deepWoodsAPI != null)
+                    {
+                        CustomizeDeepWoods(deepWoodsAPI);
+                    }
+                    else
+                    {
+                        Monitor.Log("DeepWoodsAPI could not be loaded.", LogLevel.Warn);
+                    }
                 }
                 else
                 {
-                    Monitor.Log("DeepWoodsAPI could not be loaded.", LogLevel.Warn);
+                    Monitor.Log("DeepWoodsMod is not loaded.", LogLevel.Warn);
                 }
-            }
-            else
-            {
-                Monitor.Log("DeepWoodsMod is not loaded.", LogLevel.Warn);
             }
         }
 

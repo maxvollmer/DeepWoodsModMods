@@ -1,11 +1,11 @@
 ﻿{
   "Name": "[DW]ExampleCustomLevel",
   "Author": "Max Vollmer",
-  "Version": "2.0.0",
+  "Version": "2.1.0",
   "Description": "Replaces every 2nd DeepWoods level with a custom level.",
   "UniqueID": "maxvollmer.deepwoodsmod.examplecustomlevel",
   "EntryDll": "ExampleCustomLevel.dll",
-  "MinimumApiVersion": "2.9.2",
+  "MinimumApiVersion": "2.10.2",
   "Dependencies": [
     {
       "UniqueID": "maxvollmer.deepwoodsmod",
