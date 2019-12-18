@@ -127,7 +127,7 @@ namespace EvenMoreDeepWoods
 
         private int GetRandomObjectQuality(Random random)
         {
-            double luck = Game1.dailyLuck + currentLuck;
+            double luck = Game1.player.team.sharedDailyLuck + currentLuck;
 
             if (luck < 0)
                 return StardewValley.Object.lowQuality;
@@ -151,7 +151,7 @@ namespace EvenMoreDeepWoods
             var random = new Random(deepWoodsLocation.Seed ^ SALT);
 
             // 10% chance +- 20% from luck
-            if ((random.NextDouble() * 10.0) < (1.0 + Game1.dailyLuck + deepWoodsLocation.LuckLevel))
+            if ((random.NextDouble() * 10.0) < (1.0 + Game1.player.team.sharedDailyLuck + deepWoodsLocation.LuckLevel))
             {
                 if (Game1.currentSeason == "winter")
                     AddWinterStuffToClearing(deepWoodsLocation);
