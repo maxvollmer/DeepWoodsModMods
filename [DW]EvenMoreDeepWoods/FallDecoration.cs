@@ -51,7 +51,7 @@ namespace EvenMoreDeepWoods
             return false;
         }
 
-        protected override string textureName()
+        public override string textureName()
         {
             return "Maps\\Festivals";
         }

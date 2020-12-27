@@ -1,15 +1,15 @@
 ﻿{
   "Name": "[DW]EverythingIsAClearing",
   "Author": "Max Vollmer",
-  "Version": "2.2.0",
+  "Version": "3.0.0",
   "Description": "Every DeepWoodsLevel now is a clearing! No more monsters! No more endless trees and shrubbery! All the goods without the work! Yay?",
   "UniqueID": "maxvollmer.deepwoodsmod.everythingisaclearing",
   "EntryDll": "EverythingIsAClearing.dll",
-  "MinimumApiVersion": "3.0.0",
+  "MinimumApiVersion": "3.8.0",
   "Dependencies": [
     {
       "UniqueID": "maxvollmer.deepwoodsmod",
-      "MinimumVersion": "1.7.0-beta"
+      "MinimumVersion": "1.9.0-beta"
     }
   ]
 }
