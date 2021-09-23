@@ -76,9 +76,9 @@ namespace EvenMoreDeepWoods
             Vector2 local = Game1.GlobalToLocal(Game1.viewport, new Vector2(tileLocation.X * 64, tileLocation.Y * 64));
 
             Rectangle destinationRectangle = new Rectangle((int)local.X, (int)local.Y, 64, 64);
-            Rectangle sourceRectangle = Game1.getSourceRectForStandardTileSheet(this.texture.Value, this.index, 16, 16);
+            Rectangle sourceRectangle = Game1.getSourceRectForStandardTileSheet(this.texture.Value, this.index.Value, 16, 16);
 
-            spriteBatch.Draw(this.texture.Value, destinationRectangle, sourceRectangle, Color.White, 0, Vector2.Zero, this.flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0);
+            spriteBatch.Draw(this.texture.Value, destinationRectangle, sourceRectangle, Color.White, 0, Vector2.Zero, this.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0);
         }
     }
 }

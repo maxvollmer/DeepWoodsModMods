@@ -214,12 +214,12 @@ namespace EvenMoreDeepWoods
 
         public override bool isPassable(Character c = null)
         {
-            return this.wasPickedUp;
+            return this.wasPickedUp.Value;
         }
 
         public override bool performUseAction(Vector2 tileLocation, GameLocation location)
         {
-            if (this.wasPickedUp)
+            if (this.wasPickedUp.Value)
                 return false;
 
             if (Game1.player.addItemToInventoryBool(CreatePresent(), false))
@@ -256,7 +256,7 @@ namespace EvenMoreDeepWoods
 
         public override void draw(SpriteBatch spriteBatch, Vector2 tileLocation)
         {
-            if (this.wasPickedUp)
+            if (this.wasPickedUp.Value)
                 return;
 
             base.draw(spriteBatch, tileLocation);

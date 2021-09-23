@@ -127,7 +127,7 @@ namespace EvenMoreDeepWoods
 
         private int GetRandomObjectQuality(Random random)
         {
-            double luck = Game1.player.team.sharedDailyLuck + currentLuck;
+            double luck = Game1.player.team.sharedDailyLuck.Value + currentLuck;
 
             if (luck < 0)
                 return StardewValley.Object.lowQuality;
@@ -151,7 +151,7 @@ namespace EvenMoreDeepWoods
             var random = new Random(deepWoodsLocation.Seed ^ SALT);
 
             // 10% chance +- 20% from luck
-            if ((random.NextDouble() * 10.0) < (1.0 + Game1.player.team.sharedDailyLuck + deepWoodsLocation.LuckLevel))
+            if ((random.NextDouble() * 10.0) < (1.0 + Game1.player.team.sharedDailyLuck.Value + deepWoodsLocation.LuckLevel))
             {
                 if (Game1.currentSeason == "winter")
                     AddWinterStuffToClearing(deepWoodsLocation);
@@ -173,7 +173,7 @@ namespace EvenMoreDeepWoods
             var beeHouse = new StardewValley.Object(location, 10, false);
             beeHouse.heldObject.Value = new StardewValley.Object(Vector2.Zero, 340, null, false, true, false, false);
             beeHouse.readyForHarvest.Value = true;
-            beeHouse.minutesUntilReady.Value = 0;
+            beeHouse.MinutesUntilReady = 0;
             beeHouse.showNextIndex.Value = true;
             return beeHouse;
         }

@@ -6,7 +6,6 @@ using StardewValley;
 using StardewValley.TerrainFeatures;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace LowPerformanceOptimizer
 {
